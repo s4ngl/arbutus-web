@@ -1,0 +1,65 @@
+/* Arbutus Yearbook Global Styles */
+@import url('https://cdn.tailwindcss.com');
+
+/* Indiana University Color Variables */
+:root {
+  --iu-red: #990000;      /* IU Crimson */
+  --iu-cream: #EEEDEB;    /* IU Cream beige */
+  --off-white: #F5F5F5;   /* Light background */
+  --off-black: #111111;   /* Text color */
+}
+
+/* Custom CSS classes for IU colors */
+.text-iu-red { color: var(--iu-red); }
+.bg-iu-red { background-color: var(--iu-red); }
+.text-iu-cream { color: var(--iu-cream); }
+.bg-iu-cream { background-color: var(--iu-cream); }
+.text-off-black { color: var(--off-black); }
+.bg-off-white { background-color: var(--off-white); }
+
+/* Hover states */
+.hover\:bg-iu-red:hover { background-color: var(--iu-red); }
+.hover\:text-iu-cream:hover { color: var(--iu-cream); }
+
+/* Custom button styles */
+.btn-primary {
+  background-color: var(--iu-red);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #7a0000;
+  transform: translateY(-1px);
+}
+
+/* Mobile menu styles */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--iu-red);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .text-responsive-xl { font-size: 1.5rem; }
+  .text-responsive-2xl { font-size: 1.875rem; }
+}
+
+@media (min-width: 769px) {
+  .text-responsive-xl { font-size: 2rem; }
+  .text-responsive-2xl { font-size: 3rem; }
+}
