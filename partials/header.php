@@ -8,7 +8,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/globals.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">

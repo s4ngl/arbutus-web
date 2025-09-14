@@ -49,3 +49,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// Phase 7: Auto-scrolling Archive Gallery
+document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.getElementById('archive-gallery');
+    if (gallery) {
+        // Generate book placeholders for years 2000-2025
+        const years = [];
+        for (let year = 2000; year <= 2025; year++) {
+            years.push(year);
+        }
+        
+        // Duplicate the years array to create seamless loop
+        const allYears = [...years, ...years];
+        
+        allYears.forEach(year => {
+            const book = document.createElement('div');
+            book.className = 'book-placeholder';
+            book.setAttribute('data-year', year);
+            gallery.appendChild(book);
+        });
+        
+        // Pause animation on hover
+        gallery.addEventListener('mouseenter', function() {
+            this.style.animationPlayState = 'paused';
+        });
+        
+        gallery.addEventListener('mouseleave', function() {
+            this.style.animationPlayState = 'running';
+        });
+    }
+});
