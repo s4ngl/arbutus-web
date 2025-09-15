@@ -1,178 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">About Us - Arbutus Yearbook</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Arbutus Yearbook</title>
-    <link rel="stylesheet" href="css/globals.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="description" content="Learn about the Arbutus yearbook - a student-run publication under the umbrella of Indiana University Student Media.">
-</head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globals.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<body class="bg-off-white text-off-black">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-<nav class="glass-nav shadow-lg sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 px-6 px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex items-center">
-                <a href="index.html" class="flex items-center">
-                    <div class="w-10 h-10 bg-iu-red rounded-full flex items-center justify-center mr-3">
-                        <span class="text-white font-bold text-lg">A</span>
-                    </div>
-                    <span class="text-xl font-bold text-iu-red">Arbutus Yearbook</span>
-                </a>
-            </div>
+    <!-- Meta tags -->
+    <meta
+      name="description"
+      content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media."
+    />
+    <meta
+      name="keywords"
+      content="Indiana University, IU, yearbook, Arbutus, student media, Bloomington"
+    />
+    <meta name="author" content="Arbutus Yearbook Staff" />
 
-            <div class="hidden md:flex items-center space-x-8">
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors flex items-center">
-                        Yearbook
-                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="order.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Order a Book</a>
-                        <a href="portraits.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Portraits</a>
-                        <a href="sneakpeek.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Sneak Peek</a>
-                    </div>
-                </div>
-                
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors flex items-center">
-                        About
-                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">About Us</a>
-                        <a href="staff.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Staff</a>
-                        <a href="get-involved.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Get Involved</a>
-                    </div>
-                </div>
-                
-                <a href="archive.html" class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors">Archive</a>
-                <a href="advertise.html" class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors">Advertise</a>
-                <a href="contact.html" class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors">Contact</a>
-            </div>
+    <!-- Open Graph tags -->
+    <meta
+      property="og:title"
+      id="og-title"
+      content="About Us - Arbutus Yearbook"
+    />
+    <meta
+      property="og:description"
+      content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.iuyearbook.com" />
 
-            <div class="md:hidden flex items-center">
-                <button type="button" id="nav-toggle" class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </div>
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      id="twitter-title"
+      content="About Us - Arbutus Yearbook"
+    />
+    <meta
+      name="twitter:description"
+      content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media."
+    />
+  </head>
 
-    <div class="md:hidden hidden" id="nav-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 px-3 glass-card">
-            <a href="order.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Order a Book</a>
-            <a href="portraits.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Portraits</a>
-            <a href="sneakpeek.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Sneak Peek</a>
-            <a href="get-involved.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Get Involved</a>
-            <a href="staff.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Staff</a>
-            <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">About Us</a>
-            <a href="archive.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Archive</a>
-            <a href="advertise.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Advertise</a>
-            <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Contact</a>
-        </div>
-    </div>
-</nav>
+  <body class="bg-iu-white text-iu-black font-sans leading-relaxed">
+    <div id="navbar-container"></div>
 
-<!-- Page Header -->
-<section class="bg-iu-red text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 px-6 px-8 text-center">
+    <!-- Page Header -->
+    <section class="bg-iu-red text-iu-cream py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl font-bold mb-4">About Us</h1>
-        <p class="text-xl">The story behind the Arbutus yearbook</p>
-    </div>
-</section>
+        <p class="text-xl">Learn about the Arbutus yearbook tradition</p>
+      </div>
+    </section>
 
-<!-- About Content -->
-<section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 px-6 px-8">
-        <!-- Our Namesake Section -->
-        <div class="mb-16">
-            <h2 class="text-3xl font-bold text-iu-red mb-8">Our Namesake</h2>
-            <div class="text-lg text-gray-700 space-y-6">
-                <p>
-                    In the early 1890s with no automobiles for cruising, IU students spent spring afternoons in a wooded area about four miles east of Bloomington called Arbutus Hill. They sunned themselves while surrounded by the spicy fragrance of the arbutus, a delicate pink ground flower.
-                </p>
-                <p>
-                    Discovered there in 1877 by Professor Boisen, it was thought to be a previously undocumented rarity and became a coveted treasure of the University community.
-                </p>
-                <p>
-                    Even after people realized it was the New England mayflower, Boisen's name stuck. Students and faculty so fondly associated the arbutus with Indiana that the flower became the namesake of our first yearbook in 1894.
-                </p>
-                <p>
-                    The arbutus has inspired several Hoosier poets and, for a while, annual bouquets were picked for former IU President Herman B Wells. Arbutus Hill, named after the flower, remains today a protective haven for the trailing wild flower.
-                </p>
-            </div>
+    <!-- About Content -->
+    <section class="py-16 bg-iu-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Main Content -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-iu-red mb-6">
+            The Arbutus Yearbook
+          </h2>
+          <p class="text-lg text-iu-black leading-relaxed">
+            The Arbutus yearbook is a student-run publication under the umbrella
+            of Indiana University Student Media. Since 1894, we have been
+            capturing the memories and stories that define the Indiana
+            University experience.
+          </p>
         </div>
 
-        <!-- Mission Section -->
-        <div class="card-filled mb-16">
-            <h2 class="text-3xl font-bold text-iu-red mb-8">Our Mission</h2>
-            <p class="text-lg text-gray-700 mb-6">
-                The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media. We are dedicated to capturing the memories, achievements, and spirit of the Indiana University community through exceptional photography and storytelling.
+        <!-- History Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+          <div>
+            <h3 class="text-2xl font-bold text-iu-red mb-6">Our History</h3>
+            <p class="text-iu-black mb-4">
+              Founded in 1894, the Arbutus has been documenting campus life for
+              over 130 years. Our name comes from the arbutus flower, which was
+              once abundant on the Indiana University campus.
             </p>
-            <p class="text-lg text-gray-700">
-                Each year, our talented team of student journalists, photographers, and designers work tirelessly to create a lasting record of university life that students will treasure for years to come.
+            <p class="text-iu-black mb-4">
+              Throughout the decades, we have chronicled the evolution of
+              student life, campus traditions, academic achievements, and the
+              vibrant community that makes IU special.
             </p>
+            <p class="text-iu-black">
+              Today, we continue this rich tradition with modern storytelling
+              techniques while maintaining the timeless quality that makes
+              yearbooks treasured keepsakes.
+            </p>
+          </div>
+
+          <div class="bg-iu-cream p-8 rounded-lg">
+            <h4 class="text-xl font-bold text-iu-red mb-4">Quick Facts</h4>
+            <ul class="space-y-3 text-iu-black">
+              <li><strong>Founded:</strong> 1894</li>
+              <li><strong>Published:</strong> Annually</li>
+              <li><strong>Staff:</strong> Student-run</li>
+              <li>
+                <strong>Organization:</strong> Indiana University Student Media
+              </li>
+              <li>
+                <strong>Mission:</strong> Documenting campus life and student
+                experiences
+              </li>
+            </ul>
+          </div>
         </div>
-    </div>
-</section>
 
-<footer class="bg-iu-cream mt-16 py-12">
-    <div class="max-w-7xl mx-auto px-4 px-6 px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <div class="col-span-1 lg:col-span-2">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-iu-red rounded-full flex items-center justify-center mr-3">
-                        <span class="text-white font-bold text-xl">A</span>
-                    </div>
-                    <span class="text-xl font-bold text-iu-red">Arbutus Yearbook</span>
-                </div>
-                <p class="text-sm text-gray-700 mb-4">
-                    The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media.
-                </p>
-                <p class="text-sm text-gray-600">
-                    Copyright © 2025 Arbutus yearbook. 
-                    <a href="privacy.html" class="text-iu-red hover:underline">Terms of use and privacy policy</a>
-                </p>
+        <!-- Mission & Values -->
+        <div class="bg-iu-cream p-8 rounded-lg mb-12">
+          <h3 class="text-2xl font-bold text-iu-red mb-6 text-center">
+            Our Mission & Values
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <h4 class="text-lg font-semibold text-iu-red mb-3">
+                Documentation
+              </h4>
+              <p class="text-iu-black">
+                We capture the moments, people, and events that define each
+                academic year at Indiana University.
+              </p>
             </div>
-
-            <div>
-                <h3 class="text-lg font-semibold text-iu-red mb-4">Contact Us</h3>
-                <div class="space-y-2 text-sm text-gray-700">
-                    <p><strong>IU Student Media</strong><br>ARBUTUS YEARBOOK</p>
-                    <p>601 E. Kirkwood Ave.<br>Bloomington, IN 47405</p>
-                    <p>Phone: <a href="tel:812-855-9737" class="text-iu-red hover:underline">812-855-9737</a></p>
-                    <p>Email: <a href="mailto:arbutus@iu.edu" class="text-iu-red hover:underline">arbutus@iu.edu</a></p>
-                </div>
+            <div class="text-center">
+              <h4 class="text-lg font-semibold text-iu-red mb-3">
+                Storytelling
+              </h4>
+              <p class="text-iu-black">
+                Through words and images, we tell the stories that matter to our
+                campus community.
+              </p>
             </div>
-
-            <div>
-                <h3 class="text-lg font-semibold text-iu-red mb-4">Follow Us</h3>
-                <div class="flex space-x-4 mb-4">
-                    <a href="#" class="text-gray-600 hover:text-iu-red transition-colors">
-                        <span class="sr-only">Facebook</span>
-                        Facebook
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-iu-red transition-colors">
-                        <span class="sr-only">Twitter</span>
-                        Twitter
-                    </a>
-                </div>
+            <div class="text-center">
+              <h4 class="text-lg font-semibold text-iu-red mb-3">Tradition</h4>
+              <p class="text-iu-black">
+                We honor the legacy of over 130 years while embracing innovation
+                and modern techniques.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</footer>
 
-<script src="js/script.js"></script>
+        <!-- Student Media -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold text-iu-red mb-6 text-center">
+            Indiana University Student Media
+          </h3>
+          <p class="text-lg text-iu-black text-center mb-8">
+            The Arbutus is proud to be part of Indiana University Student Media,
+            which provides students with hands-on experience in journalism,
+            photography, and publishing.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-iu-white p-6 rounded-lg">
+              <h4 class="text-lg font-bold text-iu-red mb-4">
+                Professional Development
+              </h4>
+              <p class="text-iu-black">
+                Students gain real-world experience in journalism, design,
+                photography, and project management while working on an
+                award-winning publication.
+              </p>
+            </div>
+            <div class="bg-iu-white p-6 rounded-lg">
+              <h4 class="text-lg font-bold text-iu-red mb-4">
+                Award-Winning Publication
+              </h4>
+              <p class="text-iu-black">
+                The Arbutus has received recognition for excellence in student
+                journalism and yearbook design, showcasing the talent and
+                dedication of our staff.
+              </p>
+            </div>
+          </div>
+        </div>
 
-</body>
+        <!-- Contact Information -->
+        <div class="bg-iu-red text-iu-cream p-8 rounded-lg text-center">
+          <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+          <p class="text-lg mb-6">
+            Want to learn more about the Arbutus or get involved? We'd love to
+            hear from you.
+          </p>
+          <div class="space-y-4">
+            <p class="text-xl">
+              <a
+                href="mailto:arbutus@iu.edu"
+                class="hover:text-iu-cream transition-colors"
+              >
+                ✉️ arbutus@iu.edu
+              </a>
+            </p>
+            <p class="text-lg">
+              <a
+                href="tel:812-855-9737"
+                class="hover:text-iu-cream transition-colors"
+              >
+                📞 812-855-9737
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+      // Load partials when page loads
+      document.addEventListener('DOMContentLoaded', function () {
+        loadPartial('partials/navbar.html', 'navbar-container');
+        loadPartial('partials/footer.html', 'footer-container');
+      });
+    </script>
+  </body>
 </html>

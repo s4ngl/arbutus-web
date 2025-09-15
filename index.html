@@ -1,332 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Arbutus Yearbook</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">Home - Arbutus Yearbook</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/globals.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Meta tags -->
-    <meta name="description" content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media.">
-    <meta name="keywords" content="Indiana University, IU, yearbook, Arbutus, student media, Bloomington">
-    <meta name="author" content="Arbutus Yearbook Staff">
+    <meta
+      name="description"
+      content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media."
+    />
+    <meta
+      name="keywords"
+      content="Indiana University, IU, yearbook, Arbutus, student media, Bloomington"
+    />
+    <meta name="author" content="Arbutus Yearbook Staff" />
 
     <!-- Open Graph tags -->
-    <meta property="og:title" content="Home - Arbutus Yearbook">
-    <meta property="og:description" content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.iuyearbook.com">
+    <meta property="og:title" id="og-title" content="Home - Arbutus Yearbook" />
+    <meta
+      property="og:description"
+      content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.iuyearbook.com" />
 
     <!-- Twitter Card tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home - Arbutus Yearbook">
-    <meta name="twitter:description" content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media.">
-</head>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      id="twitter-title"
+      content="Home - Arbutus Yearbook"
+    />
+    <meta
+      name="twitter:description"
+      content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media."
+    />
+  </head>
 
-<body class="bg-off-white text-off-black font-sans leading-relaxed">
+  <body class="bg-iu-white text-iu-black font-sans leading-relaxed">
+    <div id="navbar-container"></div>
 
-<nav class="glass-nav shadow-lg sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <!-- Logo/Brand - Phase 8: Added placeholder logo -->
-            <div class="flex items-center">
-                <a href="index.html" class="flex items-center">
-                    <div class="w-10 h-10 bg-iu-red rounded-full flex items-center justify-center mr-3">
-                        <span class="text-white font-bold text-lg">A</span>
-                    </div>
-                    <span class="text-xl font-bold text-iu-red">Arbutus Yearbook</span>
-                </a>
-            </div>
+    <!-- Phase 6: Enhanced Hero Section -->
+    <section class="hero-enhanced bg-iu-red text-iu-cream">
+      <div class="absolute inset-0">
+        <img
+          src="images/yearbook-cover-2018.jpg"
+          alt="2018 Yearbook Cover"
+          class="w-full h-full object-cover opacity-20"
+          onerror="this.style.display='none'"
+        />
+      </div>
 
-            <!-- Phase 5: Simplified Desktop Navigation with Dropdowns -->
-            <div class="hidden md:flex items-center space-x-8">
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors flex items-center">
-                        Yearbook
-                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="order.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Order a Book</a>
-                        <a href="portraits.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Portraits</a>
-                        <a href="sneakpeek.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Sneak Peek</a>
-                    </div>
-                </div>
-                
-                <div class="relative group">
-                    <button class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors flex items-center">
-                        About
-                        <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                        <a href="about.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">About Us</a>
-                        <a href="staff.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Staff</a>
-                        <a href="get-involved.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-iu-cream hover:text-iu-red">Get Involved</a>
-                    </div>
-                </div>
-                
-                <a href="archive.html" class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors">Archive</a>
-                <a href="advertise.html" class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors">Advertise</a>
-                <a href="contact.html" class="text-gray-700 hover:text-iu-red px-3 py-2 text-sm font-medium transition-colors">Contact</a>
-            </div>
+      <!-- 3D Book Element -->
+      <div class="hero-book"></div>
 
-            <!-- Mobile menu button -->
-            <div class="md:hidden flex items-center">
-                <button type="button" id="nav-toggle" class="hamburger" aria-controls="mobile-menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mobile menu -->
-    <div class="md:hidden hidden" id="nav-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 glass-card">
-            <a href="order.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Order a Book</a>
-            <a href="portraits.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Portraits</a>
-            <a href="sneakpeek.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Sneak Peek</a>
-            <a href="get-involved.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Get Involved</a>
-            <a href="staff.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Staff</a>
-            <a href="about.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">About Us</a>
-            <a href="archive.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Archive</a>
-            <a href="advertise.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Advertise</a>
-            <a href="contact.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-iu-red hover:bg-iu-cream transition-colors">Contact</a>
-        </div>
-    </div>
-</nav>
-
-<!-- Phase 6: Enhanced Hero Section -->
-<section class="hero-enhanced bg-iu-red text-white">
-    <div class="absolute inset-0">
-        <img src="images/yearbook-cover-2018.jpg" alt="2018 Yearbook Cover" class="w-full h-full object-cover opacity-20" onerror="this.style.display='none'">
-    </div>
-    
-    <!-- 3D Book Element -->
-    <div class="hero-book"></div>
-    
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex items-center min-h-[80vh]">
+      <div
+        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex items-center min-h-[80vh]"
+      >
         <div class="hero-content">
-            <h1 class="text-responsive-2xl font-bold mb-6">Order your Arbutus yearbook for only $75</h1>
-            <p class="text-xl mb-8">Take a peek at photos and stories you will see in the yearbook.</p>
-            <a href="order.html" class="btn-primary text-lg px-8 py-3">Order Your Yearbook</a>
+          <h1 class="text-responsive-2xl font-bold mb-6">
+            Order your Arbutus yearbook for only $75
+          </h1>
+          <p class="text-xl mb-8">
+            Take a peek at photos and stories you will see in the yearbook.
+          </p>
+          <a href="order.html" class="btn-primary text-lg px-8 py-3"
+            >Order Your Yearbook</a
+          >
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Join Our Staff Section - Phase 3: Red background -->
-<section class="py-16 bg-iu-red text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Join Our Staff Section - Phase 3: Red background -->
+    <section class="py-16 bg-iu-red text-iu-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="glass-card p-8 text-gray-800">
-                <h2 class="text-3xl font-bold text-iu-red mb-6">Join our staff</h2>
-                <p class="text-lg text-gray-700 mb-6">Get experience working on an award-winning student publication. Writers, photographers and copy editors needed year-round.</p>
-                <a href="get-involved.html" class="btn-primary">Get Involved</a>
-            </div>
-            <div>
-                <img src="images/portraits.jpg" alt="Arbutus Staff" class="w-full h-64 object-cover rounded-lg shadow-lg" onerror="this.style.display='none'">
-            </div>
+          <div class="glass-card p-8 text-iu-black">
+            <h2 class="text-3xl font-bold text-iu-red mb-6">Join our staff</h2>
+            <p class="text-lg text-iu-black mb-6">
+              Get experience working on an award-winning student publication.
+              Writers, photographers and copy editors needed year-round.
+            </p>
+            <a href="get-involved.html" class="btn-primary">Get Involved</a>
+          </div>
+          <div>
+            <img
+              src="images/portraits.jpg"
+              alt="Arbutus Staff"
+              class="w-full h-64 object-cover rounded-lg"
+              onerror="this.style.display='none'"
+            />
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Current Editor Highlight -->
-<section class="py-16 bg-iu-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Current Editor Highlight -->
+    <section class="py-16 bg-iu-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <img src="images/natalie-fitzgibbons.jpg" alt="Natalie Fitzgibbons - editor-in-chief" class="w-full h-80 object-cover rounded-lg shadow-lg" onerror="this.style.display='none'">
-            </div>
-            <div>
-                <h2 class="text-3xl font-bold text-iu-red mb-6">Meet Our Editor-in-Chief</h2>
-                <h3 class="text-xl font-semibold text-gray-800 mb-4">Natalie Fitzgibbons</h3>
-                <p class="text-lg text-gray-700 mb-6">With a focus on history, the Arbutus staff has a rich tradition of storytelling.</p>
-                <a href="staff.html" class="btn-primary">Meet the Staff</a>
-            </div>
+          <div>
+            <img
+              src="images/natalie-fitzgibbons.jpg"
+              alt="Natalie Fitzgibbons - editor-in-chief"
+              class="w-full h-80 object-cover rounded-lg"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-iu-red mb-6">
+              Meet Our Editor-in-Chief
+            </h2>
+            <h3 class="text-xl font-semibold text-iu-black mb-4">
+              Natalie Fitzgibbons
+            </h3>
+            <p class="text-lg text-iu-black mb-6">
+              With a focus on history, the Arbutus staff has a rich tradition of
+              storytelling.
+            </p>
+            <a href="staff.html" class="btn-primary">Meet the Staff</a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- Phase 7: Archive Section with Auto-Scrolling Gallery -->
-<section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Phase 7: Archive Section with Auto-Scrolling Gallery -->
+    <section class="py-16 bg-iu-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-iu-red mb-6">Visit Our Archive</h2>
-            <p class="text-lg text-gray-700 mb-8">Travel back in time with a visit to our yearbook archive.</p>
-            
-            <!-- Auto-scrolling Gallery -->
-            <div class="overflow-hidden mb-8">
-                <div class="flex space-x-4 animate-scroll" id="archive-gallery">
-                    <!-- Book placeholders will be generated by JavaScript -->
-                </div>
-            </div>
-            
-            <a href="archive.html" class="btn-primary">Browse Archive</a>
-        </div>
-    </div>
-</section>
+          <h2 class="text-3xl font-bold text-iu-red mb-6">Visit Our Archive</h2>
+          <p class="text-lg text-iu-black mb-8">
+            Travel back in time with a visit to our yearbook archive.
+          </p>
 
-<!-- News/Caption Section -->
-<section class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Auto-scrolling Gallery -->
+          <div class="overflow-hidden mb-8">
+            <div class="flex space-x-4 animate-scroll" id="archive-gallery">
+              <!-- Book placeholders will be generated by JavaScript -->
+            </div>
+          </div>
+
+          <a href="archive.html" class="btn-primary">Browse Archive</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- News/Caption Section -->
+    <section class="py-16 bg-iu-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-            <img src="images/herman-mask.jpg" alt="Herman B Wells statue with face mask" class="w-full max-w-2xl mx-auto h-80 object-cover rounded-lg shadow-lg mb-6" onerror="this.style.display='none'">
-            <p class="text-lg text-gray-700 italic">A face mask covers the face of the Herman B Wells statue April 20, 2020 on IU's campus.</p>
+          <img
+            src="images/herman-mask.jpg"
+            alt="Herman B Wells statue with face mask"
+            class="w-full max-w-2xl mx-auto h-80 object-cover rounded-lg mb-6"
+            onerror="this.style.display='none'"
+          />
+          <p class="text-lg text-iu-black italic">
+            A face mask covers the face of the Herman B Wells statue April 20,
+            2020 on IU's campus.
+          </p>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- CTA Buttons Section -->
-<section class="py-16 bg-iu-red text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- CTA Buttons Section -->
+    <section class="py-16 bg-iu-red text-iu-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-8">Get Your 2026 Yearbook</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <a href="order.html" class="bg-white text-iu-red py-6 px-8 rounded-lg font-semibold text-lg hover:bg-iu-cream transition-colors">
-                    Order a Book
-                </a>
-                <a href="portraits.html" class="bg-white text-iu-red py-6 px-8 rounded-lg font-semibold text-lg hover:bg-iu-cream transition-colors">
-                    Portraits
-                </a>
-                <a href="sneakpeek.html" class="bg-white text-iu-red py-6 px-8 rounded-lg font-semibold text-lg hover:bg-iu-cream transition-colors">
-                    Sneak Peek
-                </a>
-            </div>
+          <h2 class="text-3xl font-bold mb-8">Get Your 2026 Yearbook</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a
+              href="order.html"
+              class="bg-iu-white text-iu-red py-6 px-8 rounded-lg font-semibold text-lg hover:bg-iu-cream transition-colors"
+            >
+              Order a Book
+            </a>
+            <a
+              href="portraits.html"
+              class="bg-iu-white text-iu-red py-6 px-8 rounded-lg font-semibold text-lg hover:bg-iu-cream transition-colors"
+            >
+              Portraits
+            </a>
+            <a
+              href="sneakpeek.html"
+              class="bg-iu-white text-iu-red py-6 px-8 rounded-lg font-semibold text-lg hover:bg-iu-cream transition-colors"
+            >
+              Sneak Peek
+            </a>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<!-- General Info Section - Phase 4: Glass Cards -->
-<section class="py-16 bg-iu-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- General Info Section - Phase 4: Glass Cards -->
+    <section class="py-16 bg-iu-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Portraits Info -->
-            <div class="card-filled text-center">
-                <h3 class="text-xl font-bold text-iu-red mb-4">Portraits</h3>
-                <p class="text-gray-700">Watch this space for 2026 Arbutus portrait information.</p>
-            </div>
-            
-            <!-- Order Info -->
-            <div class="card-filled text-center">
-                <h3 class="text-xl font-bold text-iu-red mb-4">Order a yearbook</h3>
-                <p class="text-gray-700 mb-4">
-                    <a href="order.html" class="text-iu-red hover:underline font-semibold">Order your 2026 IU yearbook today!</a>
-                </p>
-            </div>
-            
-            <!-- Delivery Info -->
-            <div class="card-filled text-center">
-                <h3 class="text-xl font-bold text-iu-red mb-4">When will I get my yearbook?</h3>
-                <p class="text-gray-700">2026 yearbooks are scheduled to be shipped beginning late June 2026.</p>
-            </div>
+          <!-- Portraits Info -->
+          <div class="card-filled text-center">
+            <h3 class="text-xl font-bold text-iu-red mb-4">Portraits</h3>
+            <p class="text-iu-black">
+              Watch this space for 2026 Arbutus portrait information.
+            </p>
+          </div>
+
+          <!-- Order Info -->
+          <div class="card-filled text-center">
+            <h3 class="text-xl font-bold text-iu-red mb-4">Order a yearbook</h3>
+            <p class="text-iu-black mb-4">
+              <a
+                href="order.html"
+                class="text-iu-red hover:underline font-semibold"
+                >Order your 2026 IU yearbook today!</a
+              >
+            </p>
+          </div>
+
+          <!-- Delivery Info -->
+          <div class="card-filled text-center">
+            <h3 class="text-xl font-bold text-iu-red mb-4">
+              When will I get my yearbook?
+            </h3>
+            <p class="text-iu-black">
+              2026 yearbooks are scheduled to be shipped beginning late June
+              2026.
+            </p>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<footer class="bg-iu-cream mt-16 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Main Footer Content -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-            <!-- About Section - Phase 8: Added placeholder logo -->
-            <div class="col-span-1 lg:col-span-2">
-                <div class="flex items-center mb-4">
-                    <div class="w-12 h-12 bg-iu-red rounded-full flex items-center justify-center mr-3">
-                        <span class="text-white font-bold text-xl">A</span>
-                    </div>
-                    <span class="text-xl font-bold text-iu-red">Arbutus Yearbook</span>
-                </div>
-                <p class="text-sm text-gray-700 mb-4">
-                    The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media.
-                </p>
-                <p class="text-sm text-gray-600">
-                    Copyright © 2025 Arbutus yearbook. 
-                    <a href="privacy.html" class="text-iu-red hover:underline">Terms of use and privacy policy</a>
-                </p>
-            </div>
+    <div id="footer-container"></div>
 
-            <!-- Contact Information -->
-            <div>
-                <h3 class="text-lg font-semibold text-iu-red mb-4">Contact Us</h3>
-                <div class="space-y-2 text-sm text-gray-700">
-                    <p><strong>IU Student Media</strong><br>ARBUTUS YEARBOOK</p>
-                    <p>601 E. Kirkwood Ave.<br>Bloomington, IN 47405</p>
-                    <p>Phone: <a href="tel:812-855-9737" class="text-iu-red hover:underline">812-855-9737</a></p>
-                    <p>Email: <a href="mailto:arbutus@iu.edu" class="text-iu-red hover:underline">arbutus@iu.edu</a></p>
-                </div>
-            </div>
-
-            <!-- Social Media & Links -->
-            <div>
-                <h3 class="text-lg font-semibold text-iu-red mb-4">Follow Us</h3>
-                <div class="flex space-x-4 mb-4">
-                    <a href="#" class="text-gray-600 hover:text-iu-red transition-colors">
-                        <img src="images/facebook-logo.svg" alt="Facebook" class="h-6 w-6" onerror="this.style.display='none'">
-                        <span class="sr-only">Facebook</span>
-                    </a>
-                    <a href="#" class="text-gray-600 hover:text-iu-red transition-colors">
-                        <img src="images/twitter-logo.svg" alt="Twitter" class="h-6 w-6" onerror="this.style.display='none'">
-                        <span class="sr-only">Twitter</span>
-                    </a>
-                </div>
-                <div class="space-y-2 text-sm text-gray-700">
-                    <p><strong>Advertising Department</strong></p>
-                    <p>Phone: <a href="tel:812-855-0763" class="text-iu-red hover:underline">812-855-0763</a></p>
-                    <p>Fax: 812-855-8009</p>
-                    <p>Franklin Hall, Rm 129</p>
-                    <p>Email: <a href="mailto:advertise@idsnews.com" class="text-iu-red hover:underline">advertise@idsnews.com</a></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="border-t border-gray-300 pt-8 mb-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-                <div>
-                    <h4 class="font-semibold text-iu-red mb-2">Portraits</h4>
-                    <p class="text-gray-700">Watch this space for 2026 Arbutus portrait information.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-iu-red mb-2">Order a yearbook</h4>
-                    <p class="text-gray-700">
-                        <a href="order.html" class="text-iu-red hover:underline">Order your 2026 IU yearbook today!</a>
-                    </p>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-iu-red mb-2">When will I get my yearbook?</h4>
-                    <p class="text-gray-700">2026 yearbooks are scheduled to be shipped beginning late June 2026.</p>
-                </div>
-                <div>
-                    <h4 class="font-semibold text-iu-red mb-2">Archive</h4>
-                    <p class="text-gray-700">
-                        <a href="archive.html" class="text-iu-red hover:underline">Travel back in time with a visit to our yearbook archive.</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Powered By -->
-        <div class="border-t border-gray-300 pt-4 text-center">
-            <div class="flex items-center justify-center space-x-2 text-sm text-gray-600">
-                <span>Powered by</span>
-                <img src="images/state-news-logo.svg" alt="The State News" class="h-6 w-auto" onerror="this.style.display='none'">
-                <span>Solutions by The State News</span>
-            </div>
-        </div>
-    </div>
-</footer>
-
-    <!-- JavaScript -->
     <script src="js/script.js"></script>
-
-</body>
+    <script>
+      // Load partials when page loads
+      document.addEventListener('DOMContentLoaded', function () {
+        loadPartial('partials/navbar.html', 'navbar-container');
+        loadPartial('partials/footer.html', 'footer-container');
+      });
+    </script>
+  </body>
 </html>

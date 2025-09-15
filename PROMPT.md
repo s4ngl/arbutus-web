@@ -1,6 +1,6 @@
 # Arbutus Yearbook Website Redesign Prompt
 
-**Goal:** Recreate the Arbutus Yearbook site with the given file structure, using TailwindCSS and PHP partials. Include **all original text and content**, exactly as found on the current site, organized into the new files. Use Indiana University’s official color scheme: *IU Crimson (#990000)* for the main accent, a light beige (*IU Cream #EEEDEB*) for the secondary accent, plus white and an off-black (e.g. #111111) for text/background variables [oai_citation:0‡teamcolorcodes.com](https://teamcolorcodes.com/indiana-hoosiers-color-codes/#:~:text=Crimson%20PANTONE%3A%20PMS%20201%20Hex,153%2C%200%2C%200) [oai_citation:1‡teamcolorcodes.com](https://teamcolorcodes.com/indiana-hoosiers-color-codes/#:~:text=Cream%20Hex%20Color%3A%20,0%2C0%2C0%2C0). Define these colors in `css/globals.css` as CSS variables.
+**Goal:** Recreate the Arbutus Yearbook site with the given file structure, using TailwindCSS and PHP partials. Include **all original text and content**, exactly as found on the current site, organized into the new files. Use Indiana University’s official color scheme: *IU Crimson (#990000)* for the main accent, a light beige (*IU Cream #EEEDEB*) for the secondary accent, plus white and an iu-black (e.g. #111111) for text/background variables [oai_citation:0‡teamcolorcodes.com](https://teamcolorcodes.com/indiana-hoosiers-color-codes/#:~:text=Crimson%20PANTONE%3A%20PMS%20201%20Hex,153%2C%200%2C%200) [oai_citation:1‡teamcolorcodes.com](https://teamcolorcodes.com/indiana-hoosiers-color-codes/#:~:text=Cream%20Hex%20Color%3A%20,0%2C0%2C0%2C0). Define these colors in `css/globals.css` as CSS variables.
 
 ## File Structure
 - `index.php` – Homepage (includes header, navbar, main content, footer, scripts).
@@ -19,7 +19,7 @@
 
 ## index.php
 - Use PHP includes: `<?php include('partials/header.php'); ?>`, `navbar.php`, `footer.php`, `scripts.php`.
-- **Hero Section:** Full-width banner with the 2018 yearbook cover image (`images/yearbook-cover-2018.jpg`) [oai_citation:2‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Image%3A%202018%20Yearbook%20Cover%20Order,Portraits%20%20%20Image%3A%20Portraits). Overlay text: **“Order your Arbutus yearbook for only $75”** [oai_citation:3‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Image%3A%202018%20Yearbook%20Cover%20Order,Portraits%20%20%20Image%3A%20Portraits) and the subtext *“Take a peek at photos and stories you will see in the yearbook.”* [oai_citation:4‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Take%20a%20peek%20at%20photos,will%20see%20in%20the%20yearbook). Use Tailwind utility classes (e.g. `text-4xl font-bold text-white` on IU red background).
+- **Hero Section:** Full-width banner with the 2018 yearbook cover image (`images/yearbook-cover-2018.jpg`) [oai_citation:2‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Image%3A%202018%20Yearbook%20Cover%20Order,Portraits%20%20%20Image%3A%20Portraits). Overlay text: **“Order your Arbutus yearbook for only $75”** [oai_citation:3‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Image%3A%202018%20Yearbook%20Cover%20Order,Portraits%20%20%20Image%3A%20Portraits) and the subtext *“Take a peek at photos and stories you will see in the yearbook.”* [oai_citation:4‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Take%20a%20peek%20at%20photos,will%20see%20in%20the%20yearbook). Use Tailwind utility classes (e.g. `text-4xl font-bold text-iu-cream` on IU red background).
 - **Join Our Staff Section:** A section with heading *“Join our staff”* and text *“Get experience working on an award-winning student publication. Writers, photographers and copy editors needed year-round.”* [oai_citation:5‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Get%20experience%20working%20on%20an,round). Also include a photo or graphic (e.g. use one of the portraits images or a placeholder).
 - **Current Editor Highlight:** Show *Natalie Fitzgibbons* (with alt text *“editor-in-chief”*) and label her as “editor-in-chief” [oai_citation:6‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Natalie%20Fitzgibbons), along with the tagline *“With a focus on history, the Arbutus staff has a rich tradition of storytelling.”* [oai_citation:7‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Natalie%20Fitzgibbons).
 - **Archive Teaser:** Section with a link or graphic for *Yearbook Archive* (“Travel back in time with a visit to our yearbook archive.” [oai_citation:8‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Travel%20back%20in%20time%20with,visit%20to%20our%20yearbook%20archive)). Use the archive image (`images/yearbook-archive.jpg`) and link to either an archive page or the ISSUU site.
@@ -116,8 +116,8 @@
     :root {
       --iu-red: #990000;     /* IU Crimson */
       --iu-cream: #EEEDEB;   /* IU Cream beige */
-      --off-white: #F5F5F5;  /* light background */
-      --off-black: #111111;  /* text color */
+      --iu-white: #F5F5F5;  /* light background */
+      --iu-black: #111111;  /* text color */
     }
     ```
 - Ensure `<link>` to Tailwind’s generated CSS (if using PostCSS/build) is included.
@@ -139,7 +139,7 @@
   - Social media icons (Facebook, Twitter) linking to the Arbutus accounts [oai_citation:52‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=Image%3A%20Facebook%20Logo%20Image%3A%20Twitter,Logo).
   - Logos: Arbutus flower and text (images from `images/`).
   - “Powered by The State News” with their logo (include `images/state-news-logo.svg`) [oai_citation:53‡iuyearbook.com](https://www.iuyearbook.com/#:~:text=www).
-- Style the footer with Tailwind to have a light background (using `--off-white`) and legible text (using `--off-black`).
+- Style the footer with Tailwind to have a light background (using `--iu-white`) and legible text (using `--iu-black`).
 
 ## partials/scripts.php
 - Include necessary scripts before the closing `</body>`:

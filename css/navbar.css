@@ -421,11 +421,11 @@
     --navbar-border: #000000;
     --navbar-shadow: rgba(0, 0, 0, 0.5);
   }
-  
+
   .navbar {
     border-bottom: 2px solid var(--navbar-border);
   }
-  
+
   .dropdown-menu {
     border: 2px solid var(--navbar-border);
   }
@@ -439,19 +439,19 @@
   .navbar-menu {
     display: none;
   }
-  
+
   .mobile-menu-button {
     display: flex;
   }
-  
+
   .navbar-container {
     padding: 0 1rem;
   }
-  
+
   .brand-text {
     font-size: 1.25rem;
   }
-  
+
   .logo-image {
     width: 1.75rem;
     height: 1.75rem;
@@ -463,7 +463,7 @@
   .mobile-menu-button {
     display: none;
   }
-  
+
   .mobile-menu,
   .mobile-menu-overlay {
     display: none;
@@ -474,7 +474,7 @@
   .navbar-container {
     padding: 0 2rem;
   }
-  
+
   .navbar-nav {
     gap: 2.5rem;
   }
@@ -491,17 +491,17 @@
     border-bottom: 1px solid #000;
     background: white !important;
   }
-  
+
   .mobile-menu-button,
   .mobile-menu,
   .mobile-menu-overlay {
     display: none !important;
   }
-  
+
   .navbar-menu {
     display: flex !important;
   }
-  
+
   .dropdown-menu {
     position: static !important;
     opacity: 1 !important;
@@ -511,7 +511,7 @@
     border: 1px solid #000 !important;
     margin-top: 0.5rem !important;
   }
-  
+
   .nav-link,
   .dropdown-link {
     color: #000 !important;

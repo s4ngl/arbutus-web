@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">Portraits - Arbutus Yearbook</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/globals.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Meta tags -->
+    <meta
+      name="description"
+      content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media."
+    />
+    <meta
+      name="keywords"
+      content="Indiana University, IU, yearbook, Arbutus, student media, Bloomington"
+    />
+    <meta name="author" content="Arbutus Yearbook Staff" />
+
+    <!-- Open Graph tags -->
+    <meta
+      property="og:title"
+      id="og-title"
+      content="Portraits - Arbutus Yearbook"
+    />
+    <meta
+      property="og:description"
+      content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.iuyearbook.com" />
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      id="twitter-title"
+      content="Portraits - Arbutus Yearbook"
+    />
+    <meta
+      name="twitter:description"
+      content="The Arbutus yearbook is a student-run publication under the umbrella of Indiana University Student Media."
+    />
+  </head>
+
+  <body class="bg-iu-white text-iu-black font-sans leading-relaxed">
+    <div id="navbar-container"></div>
+
+    <!-- Page Header -->
+    <section class="bg-iu-red text-iu-cream py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl font-bold mb-4">Portraits</h1>
+        <p class="text-xl">2026 Arbutus Portrait Information</p>
+      </div>
+    </section>
+
+    <!-- Portrait Information -->
+    <section class="py-16 bg-iu-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="mb-12">
+          <p class="text-lg text-iu-black leading-relaxed mb-8">
+            Arbutus 2026 portrait sessions will begin in August. Watch this
+            space for scheduling information.
+          </p>
+
+          <div class="bg-iu-cream p-8 rounded-lg">
+            <h2 class="text-2xl font-bold text-iu-red mb-6">
+              Portrait Questions?
+            </h2>
+            <p class="text-lg text-iu-black mb-4">
+              For any questions, email
+              <a
+                href="mailto:info@laurenstudios.com"
+                class="text-iu-red hover:underline font-semibold"
+                >info@laurenstudios.com</a
+              >
+              or call
+              <a
+                href="tel:951-272-8600"
+                class="text-iu-red hover:underline font-semibold"
+                >951-272-8600</a
+              >.
+            </p>
+          </div>
+        </div>
+
+        <!-- Coming Soon Notice -->
+        <div class="bg-iu-cream p-12 rounded-lg">
+          <div class="text-center">
+            <h3 class="text-3xl font-bold text-iu-red mb-6">Coming Soon</h3>
+            <p class="text-xl text-iu-black mb-8">
+              Portrait scheduling information will be available here when
+              sessions begin in August 2025.
+            </p>
+            <a href="contact.html" class="btn-primary"
+              >Contact Us for Updates</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Blocks -->
+    <section class="py-16 bg-iu-cream">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Portraits Info -->
+          <div class="text-center p-6 bg-iu-white rounded-lg">
+            <h3 class="text-xl font-bold text-iu-red mb-4">Portraits</h3>
+            <p class="text-iu-black">
+              Watch this space for 2026 Arbutus portrait information.
+            </p>
+          </div>
+
+          <!-- Order Info -->
+          <div class="text-center p-6 bg-iu-white rounded-lg">
+            <h3 class="text-xl font-bold text-iu-red mb-4">Order a yearbook</h3>
+            <p class="text-iu-black mb-4">
+              <a
+                href="order.html"
+                class="text-iu-red hover:underline font-semibold"
+                >Order your 2026 IU yearbook today!</a
+              >
+            </p>
+          </div>
+
+          <!-- Delivery Info -->
+          <div class="text-center p-6 bg-iu-white rounded-lg">
+            <h3 class="text-xl font-bold text-iu-red mb-4">
+              When will I get my yearbook?
+            </h3>
+            <p class="text-iu-black">
+              2026 yearbooks are scheduled to be shipped beginning late June
+              2026.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="js/script.js"></script>
+    <script>
+      // Load partials when page loads
+      document.addEventListener('DOMContentLoaded', function () {
+        loadPartial('partials/navbar.html', 'navbar-container');
+        loadPartial('partials/footer.html', 'footer-container');
+      });
+    </script>
+  </body>
+</html>
