@@ -23,13 +23,24 @@
 
     function initializeNavbar() {
         if (isInitialized) return;
-        
+
+        // Check if navbar elements exist before initializing
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (!mobileMenuButton || !mobileMenu) {
+            console.log('Navbar elements not found, will retry...');
+            // Retry after a short delay
+            setTimeout(initializeNavbar, 100);
+            return;
+        }
+
         setupMobileMenu();
         setupDropdowns();
         setupKeyboardNavigation();
         setupAccessibility();
         setupFocusTrap();
-        
+
         isInitialized = true;
         console.log('Arbutus Navbar initialized successfully');
     }
@@ -76,9 +87,9 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        
+
         const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-        
+
         if (isOpen) {
             closeMobileMenu();
         } else {
@@ -498,6 +509,11 @@
         }
     });
 
+    // Add a function to reset initialization (for dynamic loading)
+    function resetInitialization() {
+        isInitialized = false;
+    }
+
     // Public API for external use
     window.ArbutusNavbar = {
         openMobileMenu: openMobileMenu,
@@ -505,8 +521,16 @@
         openDropdown: openDropdown,
         closeDropdown: closeDropdown,
         announceToScreenReader: announceToScreenReader,
-        isInitialized: function() { return isInitialized; }
+        isInitialized: function() { return isInitialized; },
+        resetInitialization: resetInitialization
     };
+
+    // Listen for navbar loaded event
+    document.addEventListener('navbarLoaded', function() {
+        if (!isInitialized) {
+            initializeNavbar();
+        }
+    });
 
     // Development helper
     if (typeof console !== 'undefined' && console.log) {

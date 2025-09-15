@@ -1,0 +1,337 @@
+<!-- Main Navigation -->
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="navbar-container">
+    <!-- Logo and Brand -->
+    <div class="navbar-brand">
+      <a
+        href="index.html"
+        class="brand-link"
+        aria-label="Arbutus Yearbook Home"
+      >
+        <!-- Logo block positioned to the left of arbutus text -->
+        <img
+          src="images/icons/logo-block-transparent.svg"
+          alt="Arbutus Logo"
+          class="logo-image"
+          onerror="this.style.display='none'"
+        />
+        <span class="brand-text">arbutus</span>
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <div class="navbar-menu" id="navbar-menu">
+      <ul class="navbar-nav" role="menubar">
+        <!-- Order Now -->
+        <li class="nav-item" role="none">
+          <a href="order.html" class="nav-link" role="menuitem">Order Now</a>
+        </li>
+
+        <!-- Gallery Dropdown -->
+        <li class="nav-item dropdown" role="none">
+          <button
+            class="nav-link dropdown-toggle"
+            aria-expanded="false"
+            aria-haspopup="true"
+            role="menuitem"
+            aria-controls="gallery-menu"
+          >
+            Gallery
+            <svg
+              class="dropdown-icon"
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1.5L6 6.5L11 1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <ul
+            class="dropdown-menu"
+            id="gallery-menu"
+            role="menu"
+            aria-labelledby="gallery-toggle"
+          >
+            <li role="none">
+              <a href="sneakpeek.html" class="dropdown-link" role="menuitem"
+                >Sneak Peek</a
+              >
+            </li>
+            <li role="none">
+              <a href="portraits.html" class="dropdown-link" role="menuitem"
+                >Portraits</a
+              >
+            </li>
+            <li role="none">
+              <a href="archive.html" class="dropdown-link" role="menuitem"
+                >Archive</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- Opportunities Dropdown -->
+        <li class="nav-item dropdown" role="none">
+          <button
+            class="nav-link dropdown-toggle"
+            aria-expanded="false"
+            aria-haspopup="true"
+            role="menuitem"
+            aria-controls="opportunities-menu"
+          >
+            Opportunities
+            <svg
+              class="dropdown-icon"
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1.5L6 6.5L11 1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <ul
+            class="dropdown-menu"
+            id="opportunities-menu"
+            role="menu"
+            aria-labelledby="opportunities-toggle"
+          >
+            <li role="none">
+              <a href="get-involved.html" class="dropdown-link" role="menuitem"
+                >Get Involved</a
+              >
+            </li>
+            <li role="none">
+              <a href="advertise.html" class="dropdown-link" role="menuitem"
+                >Advertise</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- About Dropdown -->
+        <li class="nav-item dropdown" role="none">
+          <button
+            class="nav-link dropdown-toggle"
+            aria-expanded="false"
+            aria-haspopup="true"
+            role="menuitem"
+            aria-controls="about-menu"
+          >
+            About
+            <svg
+              class="dropdown-icon"
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1.5L6 6.5L11 1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <ul
+            class="dropdown-menu"
+            id="about-menu"
+            role="menu"
+            aria-labelledby="about-toggle"
+          >
+            <li role="none">
+              <a href="about.html" class="dropdown-link" role="menuitem"
+                >Organization</a
+              >
+            </li>
+            <li role="none">
+              <a href="staff.html" class="dropdown-link" role="menuitem"
+                >Staff</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <!-- Contact -->
+        <li class="nav-item" role="none">
+          <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="mobile-menu-button"
+      id="mobile-menu-button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Toggle mobile menu"
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+      <span class="mobile-menu-title">Menu</span>
+      <button
+        class="mobile-menu-close"
+        id="mobile-menu-close"
+        aria-label="Close mobile menu"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 6L6 18M6 6L18 18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a href="order.html" class="mobile-nav-link">Order Now</a>
+        </li>
+
+        <li class="mobile-nav-item mobile-dropdown">
+          <button class="mobile-nav-toggle" aria-expanded="false">
+            Gallery
+            <svg
+              class="mobile-dropdown-icon"
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1.5L6 6.5L11 1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-dropdown-menu">
+            <li>
+              <a href="sneakpeek.html" class="mobile-dropdown-link"
+                >Sneak Peek</a
+              >
+            </li>
+            <li>
+              <a href="portraits.html" class="mobile-dropdown-link"
+                >Portraits</a
+              >
+            </li>
+            <li>
+              <a href="archive.html" class="mobile-dropdown-link">Archive</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item mobile-dropdown">
+          <button class="mobile-nav-toggle" aria-expanded="false">
+            Opportunities
+            <svg
+              class="mobile-dropdown-icon"
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1.5L6 6.5L11 1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-dropdown-menu">
+            <li>
+              <a href="get-involved.html" class="mobile-dropdown-link"
+                >Get Involved</a
+              >
+            </li>
+            <li>
+              <a href="advertise.html" class="mobile-dropdown-link"
+                >Advertise</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item mobile-dropdown">
+          <button class="mobile-nav-toggle" aria-expanded="false">
+            About
+            <svg
+              class="mobile-dropdown-icon"
+              width="12"
+              height="8"
+              viewBox="0 0 12 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 1.5L6 6.5L11 1.5"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <ul class="mobile-dropdown-menu">
+            <li>
+              <a href="about.html" class="mobile-dropdown-link">Organization</a>
+            </li>
+            <li>
+              <a href="staff.html" class="mobile-dropdown-link">Staff</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="mobile-nav-item">
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>

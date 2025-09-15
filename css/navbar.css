@@ -7,7 +7,7 @@
 
 /* Custom properties for navbar-specific colors */
 :root {
-  --navbar-bg: #ffffff;
+  --navbar-bg: #FFFFFF;
   --navbar-text: var(--iu-black, #111111);
   --navbar-hover: var(--iu-red, #990000);
   --navbar-shadow: rgba(0, 0, 0, 0.1);
@@ -21,14 +21,31 @@
    PHASE 6-10: Main Navbar Structure
    ================================================ */
 
+/* Ensure navbar container doesn't interfere with sticky positioning */
+#navbar-container {
+  position: relative;
+  width: 100%;
+  /* Ensure no overflow issues */
+  overflow: visible;
+}
+
+/* Ensure body and html don't interfere with sticky positioning */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: sticky !important;
+  position: -webkit-sticky !important; /* Safari support */
+  top: 0 !important;
+  z-index: 1000 !important;
   background-color: var(--navbar-bg);
   box-shadow: 0 2px 8px var(--navbar-shadow);
   border-bottom: 1px solid var(--navbar-border);
   width: 100%;
+  /* Temporary debug styling */
+  border: 2px solid red;
 }
 
 .navbar-container {
@@ -65,14 +82,14 @@
 }
 
 .logo-image {
-  width: 2rem;
-  height: 2rem;
+  height: 4.2rem;
+  position: relative;
   margin-right: 0.75rem;
   object-fit: contain;
 }
 
 .brand-text {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   font-weight: 700;
   color: var(--navbar-text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -94,7 +111,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .nav-item {
@@ -241,19 +258,19 @@
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: min(20rem, 80vw);
+  left: -100%;
+  width: 100vw;
   height: 100vh;
   background-color: var(--navbar-bg);
   box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
-  transition: right var(--transition-speed) ease;
+  transition: left var(--transition-speed) ease;
   z-index: 1000;
   overflow-y: auto;
   transform: translateX(0);
 }
 
 .mobile-menu.active {
-  right: 0;
+  left: 0;
 }
 
 .mobile-menu-header {
@@ -293,7 +310,7 @@
 .mobile-nav-list {
   list-style: none;
   margin: 0;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 
 .mobile-nav-item {
@@ -302,10 +319,11 @@
 
 .mobile-nav-link {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 1rem 2rem;
   color: var(--navbar-text);
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.125rem;
   transition: all var(--transition-speed) ease;
   border-radius: 0.5rem;
   margin: 0 1rem;
@@ -323,12 +341,13 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 1rem 2rem;
   background: none;
   border: none;
   text-align: left;
   color: var(--navbar-text);
   font-weight: 500;
+  font-size: 1.125rem;
   cursor: pointer;
   transition: all var(--transition-speed) ease;
   border-radius: 0.5rem;
@@ -367,10 +386,10 @@
 
 .mobile-dropdown-link {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 2rem;
   color: var(--navbar-text);
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 1rem;
   transition: all var(--transition-speed) ease;
   border-radius: 0.25rem;
   margin: 0.25rem 1rem;
@@ -447,16 +466,6 @@
   .navbar-container {
     padding: 0 1rem;
   }
-
-  .brand-text {
-    font-size: 1.25rem;
-  }
-
-  .logo-image {
-    width: 1.75rem;
-    height: 1.75rem;
-    margin-right: 0.5rem;
-  }
 }
 
 @media (min-width: 769px) {
@@ -476,7 +485,7 @@
   }
 
   .navbar-nav {
-    gap: 2.5rem;
+    gap: 1rem;
   }
 }
 
@@ -567,14 +576,4 @@ html {
 .navbar {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-}
-
-/* Dark mode support (optional) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --navbar-bg: #1a1a1a;
-    --navbar-text: #ffffff;
-    --navbar-border: rgba(255, 255, 255, 0.1);
-    --navbar-shadow: rgba(0, 0, 0, 0.3);
-  }
 }

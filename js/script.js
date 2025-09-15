@@ -9,6 +9,12 @@ async function loadPartial(partialPath, targetElementId) {
         const targetElement = document.getElementById(targetElementId);
         if (targetElement) {
             targetElement.innerHTML = html;
+
+            // If navbar was loaded, trigger navbar initialization
+            if (partialPath === 'partials/navbar.html') {
+                // Dispatch a custom event to signal navbar is ready
+                document.dispatchEvent(new CustomEvent('navbarLoaded'));
+            }
         }
     } catch (error) {
         console.error('Error loading partial:', error);
