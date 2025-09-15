@@ -3,6 +3,7 @@
 /* Phase 2: Unified Color Variables with beige secondary accent */
 :root {
   --iu-red: #990000;      /* IU Crimson */
+  --iu-black: #111111;    /* IU Black - for navbar text */
   --iu-cream: #EDE8D0;    /* New unified beige secondary accent */
   --off-white: #F5F5F5;   /* Light background */
   --off-black: #111111;   /* Text color */
@@ -87,6 +88,8 @@ body {
 /* Colors */
 .text-iu-red { color: var(--iu-red); }
 .bg-iu-red { background-color: var(--iu-red); }
+.text-iu-black { color: var(--iu-black); }
+.bg-iu-black { background-color: var(--iu-black); }
 .text-iu-cream { color: var(--iu-cream); }
 .bg-iu-cream { background-color: var(--iu-cream); }
 .text-off-black { color: var(--off-black); }
