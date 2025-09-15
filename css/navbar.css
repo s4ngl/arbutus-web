@@ -465,16 +465,7 @@ html, body {
   }
 }
 
-@media (min-width: 769px) {
-  .mobile-menu-button {
-    display: none;
-  }
-
-  .mobile-menu,
-  .mobile-menu-overlay {
-    display: none;
-  }
-}
+/* Removed conflicting media query - handled by min-width: 1024px rule */
 
 @media (min-width: 1024px) {
   .navbar-container {
@@ -483,6 +474,32 @@ html, body {
 
   .navbar-nav {
     gap: 1rem;
+  }
+
+  .mobile-menu-button,
+  .mobile-menu,
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+
+  .navbar-menu {
+    display: flex !important;
+  }
+}
+
+/* Ensure mobile menu is visible on smaller screens */
+@media (max-width: 1023px) {
+  .mobile-menu-button {
+    display: flex !important;
+  }
+
+  .navbar-menu {
+    display: none !important;
+  }
+
+  .mobile-menu,
+  .mobile-menu-overlay {
+    display: block !important;
   }
 }
 

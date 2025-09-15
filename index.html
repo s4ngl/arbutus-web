@@ -61,16 +61,25 @@
       <div class="hero-background-overlay"></div>
 
       <!-- 3D Book Element -->
-      <div class="hero-book"></div>
+      <div
+        class="absolute sm:top-1/2 transform sm:-translate-y-1/2 sm:translate-x-1/4 overflow-hidden"
+      >
+        <img
+          src="images/mockup.png"
+          alt="Arbutus Yearbook Mockup"
+          class="object-cover"
+          onerror="this.style.display='none'"
+        />
+      </div>
 
       <div
-        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex items-center min-h-[80vh]"
+        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 flex items-center min-h-[60vh]"
       >
-        <div class="hero-content">
-          <h1 class="text-responsive-2xl font-bold mb-6">
+        <div class="hero-content xl:max-w-[35vw] sm:max-w-[50vw] mt-60 sm:mt-0">
+          <h1 class="text-responsive-2xl font-bold mb-6 break-words">
             Order your Arbutus yearbook for only $75
           </h1>
-          <p class="text-xl mb-8">
+          <p class="text-xl mb-8 break-words">
             Take a peek at photos and stories you will see in the yearbook.
           </p>
           <a href="order.html" class="btn-primary text-lg px-8 py-3"
