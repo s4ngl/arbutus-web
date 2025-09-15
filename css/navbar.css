@@ -23,7 +23,9 @@
 
 /* Ensure navbar container doesn't interfere with sticky positioning */
 #navbar-container {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   width: 100%;
   /* Ensure no overflow issues */
   overflow: visible;
@@ -36,16 +38,11 @@ html, body {
 }
 
 .navbar {
-  position: sticky !important;
-  position: -webkit-sticky !important; /* Safari support */
-  top: 0 !important;
-  z-index: 1000 !important;
+  position: relative;
   background-color: var(--navbar-bg);
   box-shadow: 0 2px 8px var(--navbar-shadow);
   border-bottom: 1px solid var(--navbar-border);
   width: 100%;
-  /* Temporary debug styling */
-  border: 2px solid red;
 }
 
 .navbar-container {
