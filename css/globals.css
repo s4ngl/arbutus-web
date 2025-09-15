@@ -142,6 +142,49 @@ a:hover {
   box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
+/* Hero section background overlay */
+.hero-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  filter: sepia(100%) saturate(200%) hue-rotate(0deg) brightness(0.5) contrast(1.2);
+  z-index: 0;
+}
+
+/* Enhanced hero section specific styling */
+.hero-enhanced {
+  min-height: 80vh;
+  position: relative;
+}
+
+.hero-enhanced .hero-background-overlay {
+  min-height: inherit;
+}
+
+.hero-background-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(109, 8, 8, 0.4) 0%, rgba(153, 0, 0, 0.4) 100%);
+  z-index: 2;
+}
+
+/* Ensure hero content is above the overlay */
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
 /* Responsive typography */
 @media (max-width: 768px) {
   .text-responsive-xl { font-size: 1.5rem; }

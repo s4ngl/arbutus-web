@@ -55,16 +55,10 @@
 
     <!-- Phase 6: Enhanced Hero Section -->
     <section
-      class="hero-enhanced bg-gradient-to-b from-iu-red-dark-to-iu-red text-iu-cream"
+      class="hero-enhanced bg-gradient-to-b from-iu-red-dark-to-iu-red text-iu-cream relative"
     >
-      <div class="absolute inset-0">
-        <img
-          src="images/yearbook-cover-2018.jpg"
-          alt="2018 Yearbook Cover"
-          class="w-full h-full object-cover opacity-20"
-          onerror="this.style.display='none'"
-        />
-      </div>
+      <!-- Background overlay with new image -->
+      <div class="hero-background-overlay"></div>
 
       <!-- 3D Book Element -->
       <div class="hero-book"></div>
@@ -91,7 +85,9 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="glass-card p-8 text-iu-black">
-            <h2 class="text-3xl font-bold text-iu-red mb-6">Join our staff</h2>
+            <h2 class="text-3xl font-bold text-iu-cream mb-6">
+              Join our staff
+            </h2>
             <p class="text-lg text-iu-cream mb-6">
               Get experience working on an award-winning student publication.
               Writers, photographers and copy editors needed year-round.
