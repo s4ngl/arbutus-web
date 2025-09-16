@@ -238,7 +238,7 @@ a:hover {
 /* Archive gallery container - allow hover effects to extend beyond bounds */
 .archive-gallery-container {
   overflow: visible !important;
-  padding: 1rem 0;
+  padding: 2rem 0 4rem 0; /* Increased bottom padding for 3D books */
   position: relative;
 }
 
@@ -248,17 +248,73 @@ a:hover {
   /* Ensure hover effects aren't clipped */
   z-index: 10;
   position: relative;
+  /* 3D book container */
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  /* Slight rotation to enhance 3D effect */
+  transform: rotateY(-5deg);
+  /* Add subtle container shadow */
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
 }
 
 .book-placeholder:hover {
-  transform: scale(1.1);
+  transform: rotateY(-5deg) scale(1.1);
   z-index: 20;
+  /* Enhanced shadow on hover */
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
 }
 
-/* Fallback placeholder for missing images */
+/* 3D Book Effect - Pages (bottom of book) */
+.book-placeholder::before {
+  content: '';
+  position: absolute;
+  top: calc(100% - 3px); /* Position below the front cover */
+  left: 0px; /* Start 8px to the left to include spine */
+  width: calc(100%); /* Extend width to include spine */
+  height: 20px; /* Thickness of the book pages */
+  background:
+    /* Spine - dark vertical rectangle on the left */
+    linear-gradient(to right, #212529 0%, #212529 8px, transparent 8px),
+    /* Pages - gradient for the rest */
+    linear-gradient(to bottom,
+      #6c757d 0%,
+      #e9ecef 15%,
+      #e9ecef 30%,
+      #e9ecef 45%,
+      #adb5bd 60%,
+      #6c757d 75%,
+      #495057 80%,
+      #212529 90%,
+      #212529 100%
+    );
+  background-size: 8px 100%, 100% 100%;
+  background-position: 0 0, 8px 0;
+  background-repeat: no-repeat;
+  transform: rotateX(-25deg);
+  transform-origin: top center;
+  /* border-radius: 6px 6px 0 0; */
+  /* Realistic shadow for pages */
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.25),
+    0 6px 12px rgba(0, 0, 0, 0.2),
+    0 3px 6px rgba(0, 0, 0, 0.15);
+  z-index: 0;
+}
+
+/* Front cover image styling for 3D effect */
 .book-placeholder img {
-  background-color: #f3f4f6;
-  border: 2px solid #e5e7eb;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  z-index: 1;
+  /* Add realistic shadow to front cover */
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Ensure the image has proper border radius to match the 3D effect */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .book-placeholder img:not([src]),
