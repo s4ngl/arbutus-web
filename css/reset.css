@@ -1,5 +1,16 @@
-/* CSS Reset - Modern Reset by Andy Bell */
-/* https://piccalil.li/blog/a-modern-css-reset/ */
+/* ================================================
+   ARBUTUS YEARBOOK - CSS RESET
+   ================================================ */
+
+/* ================================================
+   MODERN CSS RESET
+   Based on Andy Bell's Modern CSS Reset
+   https://piccalil.li/blog/a-modern-css-reset/
+   ================================================ */
+
+/* ================================================
+   BOX MODEL & LAYOUT RESET
+   ================================================ */
 
 /* Box sizing rules */
 *,
@@ -13,11 +24,9 @@
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
+/* ================================================
+   CORE HTML ELEMENTS
+   ================================================ */
 
 /* Set core root defaults */
 html:focus-within {
@@ -31,10 +40,28 @@ body {
   line-height: 1.5;
 }
 
+/* ================================================
+   LIST ELEMENTS
+   ================================================ */
+
+/* Remove list styles on ul, ol elements with a list role */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* ================================================
+   LINK ELEMENTS
+   ================================================ */
+
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
+
+/* ================================================
+   MEDIA ELEMENTS
+   ================================================ */
 
 /* Make images easier to work with */
 img,
@@ -43,6 +70,10 @@ picture {
   display: block;
 }
 
+/* ================================================
+   FORM ELEMENTS
+   ================================================ */
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -50,24 +81,6 @@ textarea,
 select {
   font: inherit;
 }
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Additional reset styles for better cross-browser consistency */
 
 /* Remove default button styles */
 button {
@@ -89,11 +102,19 @@ legend {
   padding: 0;
 }
 
+/* ================================================
+   TABLE ELEMENTS
+   ================================================ */
+
 /* Remove default table styles */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* ================================================
+   SEMANTIC ELEMENTS
+   ================================================ */
 
 /* Remove default hr styles */
 hr {
@@ -112,6 +133,10 @@ summary {
   display: list-item;
   cursor: pointer;
 }
+
+/* ================================================
+   TEXT ELEMENTS
+   ================================================ */
 
 /* Remove default mark styles */
 mark {
@@ -133,6 +158,10 @@ sup {
   vertical-align: baseline;
 }
 
+/* ================================================
+   PROGRESS & METER ELEMENTS
+   ================================================ */
+
 /* Remove default progress styles */
 progress {
   vertical-align: baseline;
@@ -143,6 +172,10 @@ meter {
   vertical-align: baseline;
 }
 
+/* ================================================
+   TEMPLATE & HIDDEN ELEMENTS
+   ================================================ */
+
 /* Remove default template styles */
 template {
   display: none;
@@ -151,4 +184,24 @@ template {
 /* Remove default hidden attribute styles */
 [hidden] {
   display: none !important;
+}
+
+/* ================================================
+   ACCESSIBILITY & MOTION PREFERENCES
+   ================================================ */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

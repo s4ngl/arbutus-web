@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Phase 7: Auto-scrolling Archive Gallery
+// Auto-scrolling Archive Gallery
 document.addEventListener('DOMContentLoaded', function() {
     const gallery = document.getElementById('archive-gallery');
     if (gallery) {

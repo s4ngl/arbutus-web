@@ -1,13 +1,8 @@
-/**
- * Arbutus Yearbook - Complete Navbar JavaScript
- * Implementing all accessibility and interactive requirements
- */
-
 (function() {
     'use strict';
 
     // ================================================
-    // PHASE 1-5: Initialization and Setup
+    // Initialization and Setup
     // ================================================
 
     let isInitialized = false;
@@ -46,7 +41,7 @@
     }
 
     // ================================================
-    // PHASE 6-10: Mobile Menu Functionality
+    // Mobile Menu Functionality
     // ================================================
 
     function setupMobileMenu() {
@@ -159,7 +154,7 @@
     }
 
     // ================================================
-    // PHASE 11-15: Mobile Dropdown Functionality
+    // Mobile Dropdown Functionality
     // ================================================
 
     function setupMobileDropdowns() {
@@ -203,7 +198,7 @@
     }
 
     // ================================================
-    // PHASE 16-20: Desktop Dropdown Functionality
+    // Desktop Dropdown Functionality
     // ================================================
 
     function setupDropdowns() {
@@ -288,7 +283,7 @@
     }
 
     // ================================================
-    // PHASE 21-25: Keyboard Navigation
+    // Keyboard Navigation
     // ================================================
 
     function setupKeyboardNavigation() {
@@ -376,7 +371,7 @@
     }
 
     // ================================================
-    // PHASE 26-30: Accessibility Features
+    // Accessibility Features
     // ================================================
 
     function setupAccessibility() {
@@ -421,7 +416,7 @@
     }
 
     // ================================================
-    // PHASE 31-35: Focus Trap and Final Features
+    // Focus Trap and Final Features
     // ================================================
 
     function setupFocusTrap() {
