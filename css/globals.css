@@ -92,6 +92,15 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Footer links - preserve underlines */
+footer a {
+  text-decoration: underline;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 /* Custom CSS classes for IU colors */
 .text-iu-red { color: var(--iu-red); }
 .bg-iu-red { background-color: var(--iu-red); }
