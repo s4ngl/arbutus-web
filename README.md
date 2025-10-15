@@ -382,7 +382,7 @@ Test on the following browsers:
 - **Organization**: Arbutus Yearbook Staff
 
 ### Arbutus Yearbook
-- **Email**: arbutus@iu.edu
+- **Email**: arbutuseditor@idsnews.com
 - **Phone**: 812-855-9737
 - **Address**: 601 E. Kirkwood Ave., Bloomington, IN 47405
 - **Website**: https://www.iuyearbook.com
